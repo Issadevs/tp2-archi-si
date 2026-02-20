@@ -1,0 +1,55 @@
+{
+  "etudiants": [
+    {
+      "identifiant": "E001",
+      "nom": "Dupont",
+      "prenom": "Alice",
+      "dateNaissance": "15/03/02",
+      "lieuNaissance": "Lyon",
+      "adresse": {
+        "numRue": 12,
+        "nomRue": "Avenue des Fleurs",
+        "codePostal": "69001",
+        "ville": "Lyon"
+      },
+      "mail": "alice.dupont@etudiant.fr",
+      "coursSuivis": [
+        "Algorithmique",
+        "Base de données",
+        "Réseaux"
+      ]
+    },
+    {
+      "identifiant": "E002",
+      "nom": "Martin",
+      "prenom": "Bob",
+      "dateNaissance": "22/07/01",
+      "lieuNaissance": "Paris",
+      "adresse": {
+        "numRue": 5,
+        "nomRue": "Rue de la Paix",
+        "codePostal": "75001",
+        "ville": "Paris"
+      },
+      "mail": "bob.martin@etudiant.fr",
+      "coursSuivis": [
+        "Systèmes d'exploitation",
+        "Architecture des SI"
+      ]
+    },
+    {
+      "identifiant": "E003",
+      "nom": "Bernard",
+      "prenom": "Clara",
+      "dateNaissance": "08/11/03",
+      "lieuNaissance": "Bordeaux",
+      "adresse": {
+        "numRue": 3,
+        "nomRue": "Chemin du Moulin",
+        "codePostal": "33000",
+        "ville": "Bordeaux"
+      },
+      "mail": "clara.bernard@etudiant.fr"
+    }
+  ]
+}

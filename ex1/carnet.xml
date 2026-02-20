@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carnet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="carnet.xsd">
+
+  <contact type="personne">
+    <nom>Dupont</nom>
+    <prenom>Alice</prenom>
+    <telephone>06 12 34 56 78</telephone>
+    <adresse>
+      <rue>Avenue des Fleurs</rue>
+      <numero>12</numero>
+      <ville>Lyon</ville>
+      <codePostal>69001</codePostal>
+      <pays>France</pays>
+    </adresse>
+  </contact>
+
+  <contact type="personne">
+    <nom>Martin</nom>
+    <prenom>Bob</prenom>
+    <telephone>07 98 76 54 32</telephone>
+    <adresse>
+      <rue>Rue de la Paix</rue>
+      <numero>5</numero>
+      <ville>Paris</ville>
+      <codePostal>75001</codePostal>
+      <pays>France</pays>
+    </adresse>
+  </contact>
+
+  <contact type="entreprise">
+    <nom>Tech Solutions SAS</nom>
+    <telephone>01 23 45 67 89</telephone>
+    <adresse>
+      <rue>Boulevard Haussmann</rue>
+      <numero>88</numero>
+      <ville>Paris CEDEX 09</ville>
+      <codePostal>75009</codePostal>
+      <pays>France</pays>
+    </adresse>
+  </contact>
+
+  <contact type="personne">
+    <nom>Bernard</nom>
+    <prenom>Clara</prenom>
+    <telephone>06 55 44 33 22</telephone>
+    <adresse>
+      <rue>Chemin du Moulin</rue>
+      <numero>3</numero>
+      <ville>Bordeaux</ville>
+      <codePostal>33000</codePostal>
+      <pays>France</pays>
+    </adresse>
+  </contact>
+
+</carnet>

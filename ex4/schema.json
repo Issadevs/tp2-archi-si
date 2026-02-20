@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dossier étudiant",
+  "type": "object",
+  "required": ["codePerm", "nom", "prenom", "cours"],
+  "properties": {
+    "codePerm": {
+      "type": "string",
+      "description": "Code permanent de l'étudiant"
+    },
+    "nom": {
+      "type": "string"
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "cours": {
+      "type": "array",
+      "description": "Liste des cours suivis",
+      "items": {
+        "$ref": "#/definitions/Cours"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "Cours": {
+      "type": "object",
+      "required": ["sigle", "credits"],
+      "properties": {
+        "sigle": {
+          "type": "string",
+          "description": "Identifiant du cours"
+        },
+        "credits": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Nombre de crédits"
+        },
+        "reprise": {
+          "type": "boolean",
+          "description": "Indique si le cours est une reprise (facultatif)"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

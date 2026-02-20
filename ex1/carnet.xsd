@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Type complexe pour l'adresse -->
+  <xs:complexType name="AdresseType">
+    <xs:sequence>
+      <xs:element name="rue"        type="xs:string"/>
+      <xs:element name="numero"     type="xs:integer"/>
+      <xs:element name="ville"      type="xs:string"/>
+      <xs:element name="codePostal" type="xs:string"/>
+      <xs:element name="pays"       type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Type pour un contact personne (avec prenom obligatoire) -->
+  <xs:complexType name="PersonneType">
+    <xs:sequence>
+      <xs:element name="nom"       type="xs:string"/>
+      <xs:element name="prenom"    type="xs:string"/>
+      <xs:element name="telephone" type="xs:string"/>
+      <xs:element name="adresse"   type="AdresseType"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" fixed="personne" use="required"/>
+  </xs:complexType>
+
+  <!-- Type pour un contact entreprise (sans prenom) -->
+  <xs:complexType name="EntrepriseType">
+    <xs:sequence>
+      <xs:element name="nom"       type="xs:string"/>
+      <xs:element name="telephone" type="xs:string"/>
+      <xs:element name="adresse"   type="AdresseType"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" fixed="entreprise" use="required"/>
+  </xs:complexType>
+
+  <!-- Élément racine -->
+  <xs:element name="carnet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="contact" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nom"       type="xs:string"/>
+              <xs:element name="prenom"    type="xs:string" minOccurs="0"/>
+              <xs:element name="telephone" type="xs:string"/>
+              <xs:element name="adresse"   type="AdresseType"/>
+            </xs:sequence>
+            <xs:attribute name="type" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="personne"/>
+                  <xs:enumeration value="entreprise"/>
+                  <xs:enumeration value="autre"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

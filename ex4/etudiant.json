@@ -1,0 +1,16 @@
+{
+  "codePerm": "DOEJ01020300",
+  "nom": "Doe",
+  "prenom": "John",
+  "cours": [
+    {
+      "sigle": "INF0101",
+      "credits": 3
+    },
+    {
+      "sigle": "INF0102",
+      "credits": 3,
+      "reprise": true
+    }
+  ]
+}
